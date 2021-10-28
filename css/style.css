@@ -1,0 +1,212 @@
+:root{
+    --pixel-size: 2;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-behavior: none;
+    background-color: rgb(104, 67, 139);
+}
+header{
+    width: 100%;
+    height: 10vh;
+}
+.character{
+    width: calc(16px * var(--pixel-size));
+    height: calc(18px * var(--pixel-size));
+    overflow: hidden;
+    position: relative;
+    top: 128px;
+    left: 128px;
+    transform: translate(-50%, -50%);
+}
+.bg{
+    width: 256px;
+    height: 256px;
+    background: rgb(0, 0, 0);
+    overflow: hidden;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.grass-bg{
+    width: calc(16px * var(--pixel-size) * 12);
+    height: calc(16px * var(--pixel-size) * 12);
+    transform: translateX(-50%);
+    position: absolute;
+    top: calc(-50% + 64px);
+    left: 50%;
+    image-rendering: pixelated;
+}
+canvas{
+    width: 100%;
+    height: 50vh;
+    background-color: black;
+}
+.key-pad{
+    visibility: hidden;
+    position: fixed;
+    top: 65vh;
+    left: 4%;
+
+    width: 100%;
+    height: 40vh;
+
+    opacity: 0.7;
+}
+.btn{
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 8px;
+    font-weight: bolder;
+    background-color: gray;
+    transition: all 200ms ease-in-out; 
+}
+.btn:hover{
+    opacity: 0.8;
+}
+.up-btn{
+    position: absolute;
+    top: 0rem;
+    left: 3rem;
+    transform: rotate(-90deg);
+}
+.down-btn{
+    position: absolute;
+    top: 6rem;
+    left: 3rem;
+    transform: rotate(90deg);
+}
+.left-btn{
+    position: absolute;
+    top: 3rem;
+    left: 0rem;
+    transform: rotate(180deg);
+}
+.right-btn{
+    position: absolute;
+    top: 3rem;
+    left: 6rem;
+    transform: rotate(0deg);
+}
+.select-btn{
+    position: absolute;
+    top: 10rem;
+    left: 9rem;
+    width: 3rem;
+    height: 1.25rem;
+    font-size: 0.75rem;
+}
+.start-btn{
+    position: absolute;
+    top: 10rem;
+    left: 13rem;
+    width: 3rem;
+    height: 1.25rem;
+    font-size: 0.75rem;
+}
+.a-btn{
+    position: absolute;
+    top: 2rem;
+    left: 15rem;
+    border-radius: 50%;
+}
+.b-btn{
+    position: absolute;
+    top: 5rem;
+    left: 18rem;
+    border-radius: 50%;
+}
+.move{
+    animation: moveSpritesheet 1s steps(4) infinite;
+    width: calc(64px * var(--pixel-size));
+    position: absolute;
+}
+.pixel-art{
+    image-rendering: pixelated;
+}
+.go-down{
+    top: calc(0px * var(--pixel-size));
+}
+.camera-down{
+    animation: moveCameraDown 4s steps(16);
+}
+.go-right{
+    top: calc(-54px * var(--pixel-size));
+}
+.camera-right{
+    animation: moveCameraRight 4s steps(16);
+}
+.go-up{
+    top: calc(-36px * var(--pixel-size));
+}
+.camera-up{
+    animation: moveCameraUp 4s steps(16);
+}
+.go-left{
+    top: calc(-18px * var(--pixel-size));
+}
+.camera-left{
+    animation: moveCameraLeft 4s steps(16);
+}
+.stop{
+    top: calc(-72px * var(--pixel-size));
+}
+.play{
+    top: calc(-90px * var(--pixel-size));
+}
+@media (max-width: 1080px) {
+    .key-pad{
+        visibility: visible;
+    }
+}
+@keyframes moveSpritesheet {
+    from{
+        transform: translate3d(0px, 0, 0);
+    }
+    to{
+        transform: translate3d(-100%, 0, 0);
+    }
+}
+@keyframes moveCameraUp {
+    from{
+        transform: translate3d(0, -100px, 0);
+    }
+    to{
+        transform: translate3d(0, 100%, 0);
+    }
+}
+@keyframes moveCameraDown {
+    from{
+        transform: translate3d(0, 100px, 0);
+    }
+    to{
+        transform: translate3d(0, -100%, 0);
+    }
+}
+@keyframes moveCameraLeft {
+    from{
+        transform: translate3d(-100px, 0, 0);
+    }
+    to{
+        transform: translate3d(100%, 0, 0);
+    }
+}
+@keyframes moveCameraRight {
+    from{
+        transform: translate3d(100px, 0, 0);
+    }
+    to{
+        transform: translate3d(-100%, 0, 0);
+    }
+}
