@@ -8,32 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <div id="logo" class="logo"></div>
-        <div id="menu" class="menu"></div>
-        <div id="hamburgerMenu" class="hamburger-menu"></div>
-    </header>
-    <div id="bg" class="bg">
-        <img id="grassBg" class="grass-bg" src="img/grass_bg.png">
-        <div  class="character">
-            <img id="character" class="pixel-art move stop" src="img/doug-sprite3.png" alt="">
-        </div>
+    <div class="game-container">
+        <canvas class="game-canvas" width="352" height="198"></canvas>
     </div>
-    <div id="screenArea" class="screen-area">
-<!--        <canvas></canvas> -->
-    </div>
-    <div class="key-area">
-        <div id="keyPad" class="key-pad">
-            <button id="upBtn" class="up-btn btn">></button>
-            <button id="downBtn" class="down-btn btn">></button>        
-            <button id="leftBtn" class="left-btn btn">></button>
-            <button id="rightBtn" class="right-btn btn">></button>
-            <button id="selectBtn" class="select-btn btn">Select</button>
-            <button id="startBtn" class="start-btn btn">Start</button>
-            <button id="aBtn" class="a-btn btn">A</button>
-            <button id="bBtn" class="b-btn btn">B</button>
-        </div>
-    </div>
+    <script src="js/overworld.js"></script>
+    <script src="js/init.js"></script>
 </body>
-<script src="js/script.js"></script>
 </html>
