@@ -21,7 +21,7 @@ class OverworldMap{
 window.OverworldMaps = {
     Grass:{
         lowerSrc: "/img/grass_bg.png",
-//        upperSrc: "/img/grass_bg.png",
+        upperSrc: "",
         gameObjects:{
             doug: new GameObject({
                 x: 5,
