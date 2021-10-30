@@ -17,7 +17,7 @@ class Overworld{
      
          //Draw Game Objects
          Object.values(this.map.gameObjects).forEach(object => {
-           object.x += 0.02;
+           object.x += 0.01;
            object.sprite.draw(this.ctx);
          })
      
@@ -30,10 +30,10 @@ class Overworld{
           })
         }
         step();
-      }
+    }
 
     init(){
-        this.map = new OverworldMap(window.OverworldMaps.Grass);
+        this.map = new OverworldMap(window.OverworldMaps.Sand);
         this.startGameLoop();
     }
 }

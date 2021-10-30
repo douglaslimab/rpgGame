@@ -34,7 +34,49 @@ window.OverworldMaps = {
             })
         }
     },
-    Street:{
-
-    }
+    Sand:{
+        lowerSrc: "/img/sand_bg.png",
+        upperSrc: "",
+        gameObjects:{
+            doug: new GameObject({
+                x: 5,
+                y: 6,
+            }),
+            npc1: new GameObject({
+                x: 9,
+                y: 2,
+                src: "/img/npc-sprite1.png",
+            })
+        }
+    },
+    Pavement:{
+        lowerSrc: "/img/pavement_bg.png",
+        upperSrc: "",
+        gameObjects:{
+            doug: new GameObject({
+                x: 5,
+                y: 6,
+            }),
+            npc1: new GameObject({
+                x: 9,
+                y: 2,
+                src: "/img/npc-sprite1.png",
+            })
+        }
+    },
+    Water:{
+        lowerSrc: "/img/water_bg.png",
+        upperSrc: "",
+        gameObjects:{
+            doug: new GameObject({
+                x: 5,
+                y: 6,
+            }),
+            npc1: new GameObject({
+                x: 9,
+                y: 2,
+                src: "/img/npc-sprite1.png",
+            })
+        }
+    },
 }
