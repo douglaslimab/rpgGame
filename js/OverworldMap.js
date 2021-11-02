@@ -40,6 +40,11 @@ window.OverworldMaps = {
         x: utils.withGrid(12),
         y: utils.withGrid(12),
         src: "/img/npc-sprite1.png"
+      }),
+      npc2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(12),
+        src: "/img/npc-sprite1.png"
       })
     }
   },
@@ -47,26 +52,33 @@ window.OverworldMaps = {
     lowerSrc: "/img/grass_bg.png",
     upperSrc: "",
     gameObjects: {
-      doug: new GameObject({
+      doug: new Person({
+        isPlayerControlled: true,
         x: utils.withGrid(8),
         y: utils.withGrid(8),
       }),
-      npc1: new GameObject({
+      npc1: new Person({
         x: utils.withGrid(12),
         y: utils.withGrid(8),
-        src: "/img/npc-sprite1.png"
+        src: ""
       }),
+      npc2: new Person({
+        x: utils.withGrid(4),
+        y: utils.withGrid(12),
+        src: ""
+      })
     }
   },
   Water: {
     lowerSrc: "/img/water_bg.png",
     upperSrc: "",
     gameObjects: {
-      doug: new GameObject({
+      doug: new Person({
+        isPlayerControlled: true,
         x: utils.withGrid(8),
         y: utils.withGrid(8),
       }),
-      npc1: new GameObject({
+      npc1: new Person({
         x: utils.withGrid(8),
         y: utils.withGrid(12),
         src: "/img/npc-sprite1.png"
@@ -77,11 +89,12 @@ window.OverworldMaps = {
     lowerSrc: "/img/pavement_bg.png",
     upperSrc: "",
     gameObjects: {
-      doug: new GameObject({
+      doug: new Person({
+        isPlayerControlled: true,
         x: utils.withGrid(8),
         y: utils.withGrid(8),
       }),
-      npc1: new GameObject({
+      npc1: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(4),
         src: "/img/npc-sprite1.png"

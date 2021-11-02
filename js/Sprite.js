@@ -12,7 +12,7 @@ class Sprite {
     this.shadow = new Image();
     this.useShadow = true; //config.useShadow || false
     if (this.useShadow) {
-      this.shadow.src = "/img/shadow.png";
+      this.shadow.src = "/img/shadow2.png";
     }
     this.shadow.onload = () => {
       this.isShadowLoaded = true;
@@ -82,10 +82,10 @@ class Sprite {
       const [frameX, frameY] = this.frame;
   
       this.isLoaded && ctx.drawImage(this.image,
-        frameX * 16, frameY * 18,
-        16,18,
+        frameX * 32, frameY * 32,
+        32,32,
         x,y,
-        16,18
+        32,32
       )
   
       this.updateAnimationProgress();

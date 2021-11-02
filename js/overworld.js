@@ -43,7 +43,7 @@ class Overworld {
  }
 
  init() {
-  this.map = new OverworldMap(window.OverworldMaps.Sand);
+  this.map = new OverworldMap(window.OverworldMaps.Grass);
 
   this.directionInput = new DirectionInput();
   this.directionInput.init();
