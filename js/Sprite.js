@@ -67,13 +67,13 @@ class Sprite {
         this.currentAnimationFrame = 0
       }
   
-  
+      
     }
     
   
     draw(ctx, cameraPerson) {
-      const x = this.gameObject.x - 8 + utils.withGrid(7.5) - cameraPerson.x;
-      const y = this.gameObject.y - 8 + utils.withGrid(7.5) - cameraPerson.y;
+      const x = this.gameObject.x - 8 + utils.withGrid(8) - cameraPerson.x;
+      const y = this.gameObject.y - 8 + utils.withGrid(8) - cameraPerson.y;
       
         
       this.isShadowLoaded && ctx.drawImage(this.shadow, x, y);
