@@ -52,24 +52,54 @@ class OverworldMap {
 
 window.OverworldMaps = {
   Sand: {
-    lowerSrc: "/img/sand_bg.png",
+    lowerSrc: "/img/grass_bg.png",
     upperSrc: "",
     gameObjects: {
       doug: new Person({
         isPlayerControlled: true,
         x: utils.withGrid(8),
         y: utils.withGrid(8),
+        src: "/img/laura-sprite.png"
       }),
-      npc1: new Person({
+      npc: new Person({
         x: utils.withGrid(12),
-        y: utils.withGrid(12),
-        src: "/img/npc-sprite1.png"
+        y: utils.withGrid(8),
+      }),
+      rock1: new Person({
+        x: utils.withGrid(13),
+        y: utils.withGrid(9),
+        src: "/img/rock.png"
+      }),
+      rock2: new Person({
+        x: utils.withGrid(12),
+        y: utils.withGrid(10),
+        src: "/img/rock.png"
+      }),
+      rock3: new Person({
+        x: utils.withGrid(11),
+        y: utils.withGrid(11),
+        src: "/img/rock.png"
+      }),
+      medium_rock1: new Person({
+        x: utils.withGrid(6),
+        y: utils.withGrid(8),
+        src: "/img/medium-rock.png"
       }),
       npc2: new Person({
         x: utils.withGrid(4),
-        y: utils.withGrid(12),
-        src: "/img/npc-sprite1.png"
-      })
+        y: utils.withGrid(4),
+        src: "/img/npc-sprite2.png"
+      }),
+      music_sheet: new Person({
+        x: utils.withGrid(12),
+        y: utils.withGrid(2),
+        src: "/img/music-sheet.png"
+      }),
+      guitar: new Person({
+        x: utils.withGrid(10),
+        y: utils.withGrid(2),
+        src: "/img/guitar.png"
+      }),
     }
   },
   Grass: {
@@ -79,12 +109,12 @@ window.OverworldMaps = {
       npc1: new Person({
         x: utils.withGrid(12),
         y: utils.withGrid(12),
-        src: ""
+        src: "/img/rock.png"
       }),
       npc2: new Person({
         x: utils.withGrid(4),
         y: utils.withGrid(4),
-        src: ""
+        src: "/img/npc-sprite2.png"
       }),
       doug: new Person({
         isPlayerControlled: true,
