@@ -52,7 +52,7 @@ class OverworldMap {
 
 window.OverworldMaps = {
   Sand: {
-    lowerSrc: "/img/grass_bg.png",
+    lowerSrc: "/img/sand_bg.png",
     upperSrc: "",
     gameObjects: {
       doug: new Person({
@@ -81,8 +81,8 @@ window.OverworldMaps = {
         src: "/img/rock.png"
       }),
       medium_rock1: new Person({
-        x: utils.withGrid(6),
-        y: utils.withGrid(8),
+        x: utils.withGrid(14),
+        y: utils.withGrid(11),
         src: "/img/medium-rock.png"
       }),
       npc2: new Person({
