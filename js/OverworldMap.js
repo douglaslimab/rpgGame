@@ -81,8 +81,8 @@ window.OverworldMaps = {
         src: "/img/rock.png"
       }),
       medium_rock1: new Person({
-        x: utils.withGrid(14),
-        y: utils.withGrid(11),
+        x: utils.withGrid(3),
+        y: utils.withGrid(3),
         src: "/img/medium-rock.png"
       }),
       npc2: new Person({
@@ -99,6 +99,11 @@ window.OverworldMaps = {
         x: utils.withGrid(10),
         y: utils.withGrid(2),
         src: "/img/guitar.png"
+      }),
+      empty: new Person({
+        x: utils.withGrid(0),
+        y: utils.withGrid(0),
+        src: "/img/empty-tile.png"
       }),
     }
   },
