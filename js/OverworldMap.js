@@ -2,16 +2,11 @@ class OverworldMap {
   constructor(config) {
     this.gameObjects = config.gameObjects;
     this.walls = config.walls || {};
-
     this.lowerImage = new Image();
     this.lowerImage.src = config.lowerSrc;
-
     this.upperImage = new Image();
     this.upperImage.src = config.upperSrc;
-
-    this.isCutscenePlaying = false;
   }
-
   drawLowerImage(ctx, cameraPerson) {
     ctx.drawImage(
       this.lowerImage, 
@@ -19,7 +14,6 @@ class OverworldMap {
       utils.withGrid(8) - cameraPerson.y
       )
   }
-
   drawUpperImage(ctx, cameraPerson) {
     ctx.drawImage(
       this.upperImage, 
@@ -27,21 +21,15 @@ class OverworldMap {
       utils.withGrid(8) - cameraPerson.y
     )
   } 
-
   isSpaceTaken(currentX, currentY, direction){
     const {x, y} = utils.nextPosition(currentX, currentY, direction);
     return this.walls[`${x}, ${y}`] || false;
   }
-
   mountObjects(){
-    Object.keys(this.gameObjects).forEach(key => {
-      let object = this.gameObjects[key];
-      object.id = key;
-
-      key.mount(this);
+    Object.values(this.gameObjects).forEach(o => {
+      o.mount(this);
     })
   }
-
   addWall(x, y) {
     this.walls[`${x}, ${y}`] = true;
   }
@@ -54,7 +42,6 @@ class OverworldMap {
     this.addWall(x, y);
   }
 }
-
 window.OverworldMaps = {
   Sand: {
     lowerSrc: "/img/sand_bg.png",
@@ -69,13 +56,6 @@ window.OverworldMaps = {
       npc: new Person({
         x: utils.withGrid(12),
         y: utils.withGrid(8),
-        behaviorLoop:[
-          { type: "walk", direction: "left"},
-          { type: "stand", direction: "up", time: 800},
-          { type: "walk", direction: "up"},
-          { type: "walk", direction: "right"},
-          { type: "walk", direction: "down"},
-        ]
       }),
       rock1: new Person({
         x: utils.withGrid(13),
@@ -93,15 +73,11 @@ window.OverworldMaps = {
         src: "/img/rock.png"
       }),
       medium_rock1: new Person({
+        x: utils.withGrid(14),
+        y: utils.withGrid(11),
         x: utils.withGrid(3),
         y: utils.withGrid(3),
-        src: "/img/medium-rock.png",
-        behaviorLoop:[
-          { type: "stand", direction: "left", time: 800},
-          { type: "stand", direction: "up", time: 800},
-          { type: "stand", direction: "right", time: 800},
-          { type: "stand", direction: "up", time: 800},
-        ]
+        src: "/img/medium-rock.png"
       }),
       npc2: new Person({
         x: utils.withGrid(4),
