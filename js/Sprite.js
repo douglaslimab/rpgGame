@@ -21,13 +21,13 @@ class Sprite {
     //Configure Animation & Initial State
     this.animations = config.animations || {
       "idle-down" : [ [0,0] ],
-      "idle-right": [ [0,1] ],
+      "idle-right": [ [0,3] ],
       "idle-up"   : [ [0,2] ],
-      "idle-left" : [ [0,3] ],
+      "idle-left" : [ [0,1] ],
       "walk-down" : [ [1,0],[0,0],[3,0],[0,0], ],
-      "walk-right": [ [1,1],[0,1],[3,1],[0,1], ],
+      "walk-right": [ [1,3],[0,3],[3,3],[0,3], ],
       "walk-up"   : [ [1,2],[0,2],[3,2],[0,2], ],
-      "walk-left" : [ [1,3],[0,3],[3,3],[0,3], ]
+      "walk-left" : [ [1,1],[0,1],[3,1],[0,1], ]
     }
     this.currentAnimation = "idle-down"; // config.currentAnimation || "idle-down";
     this.currentAnimationFrame = 0;
